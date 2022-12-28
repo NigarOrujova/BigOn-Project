@@ -1,0 +1,100 @@
+﻿@model SearchPanelDto
+
+
+
+<div class="sidebar white-bg">
+    <div class="border-default universal-padding sidebar-widget">
+        <div class="group-title">
+            <h2>Availability</h2>
+        </div>
+        <ul class="manufactures-list">
+            <li>
+                <input type="checkbox" name="filter.v.availability" value="1" id="Filter-availability-1">
+                <label for="Filter-availability-1">In stock (42)</label>
+            </li>
+            <li>
+                <input type="checkbox" name="filter.v.availability" value="0" id="Filter-availability-2">
+                <label for="Filter-availability-2">Out of stock (4)</label>
+            </li>
+        </ul>
+    </div>
+    <div class="border-default universal-padding mtb-40">
+        <div class="group-title">
+            <h2>color</h2>
+        </div>
+        <ul class="color-option">
+            @foreach (var item in Model.Colors)
+            {
+                <li>
+                    <a class="filled" style="background-color:@item.Value" data-id="@item.Id" data-entity-type="colors"></a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="border-default universal-padding">
+        <div class="group-title">
+            <h2>price</h2>
+        </div>
+        <div id="price-range" data-min="@Model.MinPrice" data-max="@Model.MaxPrice"></div>
+    </div>
+    <div class="border-default universal-padding mtb-40 sidebar-widget">
+        <div class="group-title">
+            <h2>Product type</h2>
+        </div>
+        <ul class="manufactures-list">
+            @foreach (var item in Model.Types)
+            {
+                <li>
+                    <a data-id="@item.Id" data-entity-type="types">
+                        @item.Value
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="border-default universal-padding mtb-40 sidebar-widget">
+        <div class="group-title">
+            <h2>Brand</h2>
+        </div>
+        <ul class="manufactures-list">
+            @foreach (var item in Model.Brands)
+            {
+                <li>
+                    <a data-id="@item.Id" data-entity-type="brands">
+                        @item.Value
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="border-default universal-padding mtb-40 sidebar-widget">
+        <div class="group-title">
+            <h2>Material</h2>
+        </div>
+        <ul class="manufactures-list">
+            @foreach (var item in Model.Materials)
+            {
+                <li>
+                    <a data-id="@item.Id" data-entity-type="materials">
+                        @item.Value
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="border-default universal-padding mb-40 sidebar-widget">
+        <div class="group-title">
+            <h2>Size</h2>
+        </div>
+        <ul class="manufactures-list">
+            @foreach (var item in Model.Sizes)
+            {
+                <li>
+                    <a data-id="@item.Id" data-entity-type="sizes">
+                        @item.Value
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

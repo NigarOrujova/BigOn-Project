@@ -1,0 +1,146 @@
+﻿@model PagedViewModel<BigonRole>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="page-header">
+    <div class="row align-items-end">
+        <div class="col-lg-8">
+            <div class="page-header-title">
+                <div class="d-inline">
+                    <h4>Bootstrap Basic Tables</h4>
+                    <span>
+                        lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="../index.html"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Bootstrap Table</a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Users</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <!-- Basic table card start -->
+    <div class="card">
+        <div class="card-header">
+            <h5>Basic Table</h5>
+            <span>use class <code>table</code> inside table element</span>
+
+        </div>
+        <div class="card-block table-border-style">
+            <div class="table-responsive">
+                <table class="table" id="table-draggable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th class="operations">
+                                <a asp-action="create" class="btn btn-success">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="connectedSortable">
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr data-entity-id="@item.Id">
+                                <td>@item.Name</td>
+                                <td class="operations">
+                                    <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">
+                                        <i class="fa fa-pen"></i>
+                                    </a>
+                                    <a asp-action="details" asp-route-id="@item.Id" class="btn btn-secondary">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @Model.GetPager(Url,"Index",area:"admin")
+            </div>
+        </div>
+    </div>
+</div>
+
+@section addcss{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .ui-sortable-handle {
+            cursor: move;
+        }
+    </style>
+}
+
+    @section addjs{
+    @if (User.IsInRole("sa"))
+    {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $(document).ready(function() {
+                var $tabs = $('#table-draggable');
+
+                $("tbody.connectedSortable")
+                    .sortable({
+                        connectWith: ".connectedSortable",
+                        items: "> tr:not(:first)",
+                        appendTo: $tabs,
+                        helper: "clone",
+                        zIndex: 999990,
+                        out: function(event, ui) {
+                            const bodyData = $(ui.item[0]).data();
+
+                            bodyData.aboveEntityId = $(ui.item[0].previousElementSibling).data('entity-id');
+
+                            delete bodyData['sortableItem'];
+
+                            $.ajax({
+                                type: "POST",
+                                url: "@Url.Action("RoleSorting")",
+                                async:false,
+                                data: bodyData,
+                                contentType: 'application/x-www-form-urlencoded',
+                                success: function(response) {
+                                    if (response.error == false) {
+                                        toastr.success(response.message, "Ugur!");
+                                    }
+                                    else {
+                                        toastr.error(response.message, "Xəta!");
+                                    }
+                                },
+                                error: function(response) {
+                                    console.log(response);
+                                }
+                            });
+                        }
+                    })
+                    .disableSelection();
+
+                var $tab_items = $(".nav-tabs > li", $tabs).droppable({
+                    accept: ".connectedSortable tr",
+                    hoverClass: "ui-state-hover",
+                    drop: function(event, ui) {
+                        return false;
+                    }
+                });
+            });
+        </script>
+    }
+}

@@ -1,0 +1,230 @@
+﻿@model IEnumerable<Category>
+
+<div class="vertical-menu">
+    <span class="categorie-title">Bütün kategorieyalar</span>
+    <nav>
+        <ul class="vertical-menu-list menu-hidden">
+            @foreach (var item in Model.Where(m => m.ParentId == null))
+            {
+                <li>
+                    <a href="shop.html">
+                        @item.Name
+                    </a>
+
+                    @if (item.Children.Any())
+                    {
+                        <!-- Vertical Mega-Menu Start -->
+                        <ul class="ht-dropdown megamenu">
+                            <li class="megamenu-three-column fix">
+                                @foreach (var child in item.Children)
+                                {
+                                    <ul>
+                                        <!-- Single Column Start -->
+                                        <li>
+                                            <h3>@child.Name</h3>
+                                            <ul>
+                                                @foreach (var subChild in child.GetAllChildren())
+                                                {
+                                                    <li>
+                                                        <a href="shop.html">
+                                                           @subChild.Name
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                }
+                            </li>
+                        </ul>
+                    }
+                </li>
+            }
+        </ul>
+        @*  <ul class="vertical-menu-list menu-hidden">
+
+        <li>
+        <a href="shop.html">
+        <span><img src="~/assets/img/vertical-menu/1.png" alt="menu-icon"></span>Computer
+        </a>
+        <!-- Vertical Mega-Menu Start -->
+        <ul class="ht-dropdown megamenu">
+        <!-- Mega-Menu Three Column Start -->
+        <li class="megamenu-three-column fix">
+        <ul>
+        <!-- Single Column Start -->
+        <li>
+        <h3>laptops</h3>
+        <ul>
+        <li><a href="shop.html">Best Laptops Price</a></li>
+        <li><a href="shop.html">New Laptops Price</a></li>
+        <li><a href="shop.html">Middle Laptops Price</a></li>
+        <li><a href="shop.html">Gaming Laptops Price</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        <!-- Single Column Start -->
+        <li>
+        <h3>monitors</h3>
+        <ul>
+        <li><a href="shop.html">Hd monitors</a></li>
+        <li><a href="shop.html">new monitors</a></li>
+        <li><a href="shop.html">dual monitors</a></li>
+        <li><a href="shop.html">qhd monitors</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        <!-- Single Column Start -->
+        <li>
+        <h3>ram / memory</h3>
+        <ul>
+        <li><a href="shop.html">memory one</a></li>
+        <li><a href="shop.html">memory two</a></li>
+        <li><a href="shop.html">memory three</a></li>
+        <li><a href="shop.html">memory four</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        </ul>
+        </li>
+        <!-- Mega-Menu Three Column End -->
+        </ul>
+        <!-- Vertical Mega-Menu End -->
+        </li>
+        <li>
+        <a href="shop.html"><span><img src="~/assets/img/vertical-menu/2.png" alt="menu-icon"></span>Kitchen</a>
+        <!-- Vertical Mega-Menu Start -->
+        <ul class="ht-dropdown megamenu">
+        <!-- Mega-Menu Three Column Start -->
+        <li class="megamenu-three-column fix">
+        <ul>
+        <!-- Single Column Start -->
+        <li>
+        <h3>Digital Cameras</h3>
+        <ul>
+        <li><a href="shop.html">camera one</a></li>
+        <li><a href="shop.html">camrea two</a></li>
+        <li><a href="shop.html">camera theree</a></li>
+        <li><a href="shop.html">camera four</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        <!-- Single Column Start -->
+        <li>
+        <h3>Camcorders</h3>
+        <ul>
+        <li><a href="shop.html">Camcorders new</a></li>
+        <li><a href="shop.html">Camcorders old</a></li>
+        <li><a href="shop.html">Camcorders hero</a></li>
+        <li><a href="shop.html">Camcorders tiny</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        <!-- Single Column Start -->
+        <li>
+        <h3>Photo Accessories</h3>
+        <ul>
+        <li><a href="shop.html">Cords and Cables</a></li>
+        <li><a href="shop.html">Microphones</a></li>
+        <li><a href="shop.html">gps accessories</a></li>
+        <li><a href="shop.html">Wireless Transmitters</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        </ul>
+        </li>
+        <!-- Mega-Menu Three Column End -->
+        </ul>
+        <!-- Vertical Mega-Menu End -->
+        </li>
+        <li>
+        <a href="shop.html"><span><img src="~/assets/img/vertical-menu/3.png" alt="menu-icon"></span>Smart Phone</a>
+        <!-- Vertical Mega-Menu Start -->
+        <ul class="ht-dropdown megamenu">
+        <!-- Mega-Menu Two Column Start -->
+        <li class="megamenu-three-column fix">
+        <ul>
+        <!-- Single Column Start -->
+        <li>
+        <h3>new Phones</h3>
+        <ul>
+        <li><a href="shop.html">phone one</a></li>
+        <li><a href="shop.html">phone two</a></li>
+        <li><a href="shop.html">phone three</a></li>
+        <li><a href="shop.html">phone four</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        <!-- Single Column Start -->
+        <li>
+        <h3>motion Phones</h3>
+        <ul>
+        <li><a href="shop.html">motion phone x</a></li>
+        <li><a href="shop.html">motion phone two</a></li>
+        <li><a href="shop.html">motion phone new</a></li>
+        <li><a href="shop.html">motion g5 </a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        <!-- Single Column Start -->
+        <li>
+        <h3>modern Phones</h3>
+        <ul>
+        <li><a href="shop.html">tube phone one</a></li>
+        <li><a href="shop.html">tube phone two</a></li>
+        <li><a href="shop.html">new phone (16)</a></li>
+        <li><a href="shop.html">tube phone three</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        </ul>
+        </li>
+        <!-- Mega-Menu Two Column End -->
+        </ul>
+        <!-- Vertical Mega-Menu End -->
+        </li>
+        <li>
+        <a href="shop.html"><span><img src="~/assets/img/vertical-menu/4.png" alt="menu-icon"></span>Fashion</a>
+        <!-- Vertical Mega-Menu Start -->
+        <ul class="ht-dropdown megamenu megamenu-four">
+        <!-- Mega-Menu Three Column Start -->
+        <li class="megamenu-three-column fix">
+        <ul>
+        <!-- Single Column Start -->
+        <li>
+        <h3>Towers Only</h3>
+        <ul>
+        <li><a href="shop.html">On Sale</a></li>
+        <li><a href="shop.html">Free Shipping Eligible</a></li>
+        <li><a href="shop.html">Clearance</a></li>
+        <li><a href="shop.html">3D-Capable</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        <!-- Single Column Start -->
+        <li>
+        <h3>Gaming Desktops</h3>
+        <ul>
+        <li><a href="shop.html">desktop rumer</a></li>
+        <li><a href="shop.html">desktop razar</a></li>
+        <li><a href="shop.html">Gamer Ultra Desktop </a></li>
+        <li><a href="shop.html">Alpha Desktop</a></li>
+        </ul>
+        </li>
+        <!-- Single Column End -->
+        </ul>
+        </li>
+        </ul>
+        <!-- Vertical Mega-Menu End -->
+        </li>
+        <li>
+        <a href="shop.html"><span><img src="~/assets/img/vertical-menu/5.png" alt="menu-icon"></span>Tablet</a>
+        </li>
+        <li>
+        <a href="shop.html"><span><img src="~/assets/img/vertical-menu/6.png" alt="menu-icon"></span>Electtronic</a>
+        </li>
+        <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/7.png" alt="menu-icon"></span>Books</a></li>
+        <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/8.png" alt="menu-icon"></span>Sports</a></li>
+        </ul>*@
+    </nav>
+</div>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<BlogPost>
+
+<div class="blog-related-post recent-post mtb-50">
+    <h3 class="sidebar-title">related blog post</h3>
+    <div class="blog-related-post-active owl-carousel">
+        @foreach (var item in Model)
+        {
+            <div class="single-blog">
+                <div class="blog-img">
+                    <a asp-area="" asp-controller="Blog" asp-action="Details" asp-route-slug="@item.Slug">
+                        <img src="~/uploads/images/@item.ImagePath" alt="blog-image">
+                    </a>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-content-upper">
+                        <h6 class="blog-title">
+                            <a asp-area="" asp-controller="Blog" asp-action="Details" asp-route-slug="@item.Slug">@item.Title</a>
+                        </h6>
+                        <p style="height:143px;overflow:hidden;text-align:justify">
+                            @item.Body.ToPlainText()
+                        </p>
+                    </div>
+                    <div class="blog-content-lower">
+                        <a href="https://themeforest.net/user/Bigon">Bigon</a>
+                        <span class="f-right">@item.PublishDate?.ToString("dd MMM, yyyy")</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

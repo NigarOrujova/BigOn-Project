@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Faq>
+@{
+    ViewData["Title"] = "Faqs";
+}
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+
+
+<div class="container">
+    <div class="accordion mb-5" id="accordionExample">
+        @foreach(var item in Model)
+        {
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#acc-item-@item.Id" aria-expanded="false" aria-controls="collapseTwo">
+                    @item.Question
+                </button>
+            </h2>
+            <div id="acc-item-@item.Id" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                @Html.Raw(item.Answer)    
+                </div>
+            </div>
+        </div>
+        }
+        
+    </div>
+</div>

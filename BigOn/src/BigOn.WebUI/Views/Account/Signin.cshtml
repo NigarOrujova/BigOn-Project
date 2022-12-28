@@ -1,0 +1,79 @@
+﻿@model SigninCommand
+
+@{
+    ViewData["Title"] = "Daxil ol";
+}
+
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="index.html">Ana səhifə</a>
+                </li>
+                <li class="active">
+                    <a href="404.html">Sistemə giriş</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="log-in pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4 mb-lg-0">
+                <div class="well">
+                    <div class="new-customer">
+                        <h3>Yeni hesab</h3>
+                        <p class="mtb-10">
+                            <strong>
+                                Qeydiyyat
+                            </strong>
+                        </p>
+                        <p>
+                            Qeydiyyatdan keçməklə siz sistem funksionallıqlarını tam istifadə edə bilərsiniz
+                        </p>
+                        <a class="customer-btn" asp-action="Register">davam et</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="well">
+                    <div class="return-customer">
+                        <h3 class="mb-10">Qeydiyyatlı istifadəçi</h3>
+                        <p class="mb-10">
+                            <strong>
+                                Sizi yenidən görməyimizə şadıq
+                            </strong>
+                        </p>
+                        <form method="post" autocomplete="off">
+                            <div asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <label asp-for="UserName" class="control-label">E-poçt</label>
+                                <input asp-for="UserName" placeholder="Name" id="username" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label">Şifrə</label>
+                                <input asp-for="Password" type="password" placeholder="Password" id="password" class="form-control" />
+                            </div>
+                            <p class="lost-password">
+                                <a href="forgot-password.html">Şifrəmi unutdum</a>
+                            </p>
+                            <input type="submit" value="Daxil ol" class="return-customer-btn" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<partial name="_Newsletter" />
+
+
+<environment include="Development">
+    <script>
+        document.getElementById('username').value = "akamran@code.edu.az";
+        document.getElementById('password').value = "Ca12345@@!";
+    </script>
+</environment>

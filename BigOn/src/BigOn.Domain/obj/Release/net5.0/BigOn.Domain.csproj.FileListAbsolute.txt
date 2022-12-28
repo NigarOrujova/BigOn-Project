@@ -1,0 +1,15 @@
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\bin\Release\net5.0\BigOn.Domain.deps.json
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\bin\Release\net5.0\BigOn.Domain.runtimeconfig.json
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\bin\Release\net5.0\BigOn.Domain.runtimeconfig.dev.json
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\bin\Release\net5.0\BigOn.Domain.dll
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\bin\Release\net5.0\BigOn.Domain.pdb
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.csproj.AssemblyReference.cache
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.AssemblyInfoInputs.cache
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.AssemblyInfo.cs
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.csproj.CoreCompileInputs.cache
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.dll
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\refint\BigOn.Domain.dll
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.pdb
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\BigOn.Domain.genruntimeconfig.cache
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Release\net5.0\ref\BigOn.Domain.dll

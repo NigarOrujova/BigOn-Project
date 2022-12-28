@@ -1,0 +1,134 @@
+﻿@model IEnumerable<ProductColor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Page-header start -->
+<div class="page-header">
+    <div class="row align-items-end">
+        <div class="col-lg-8">
+            <div class="page-header-title">
+                <div class="d-inline">
+                    <h4>Bootstrap Basic Tables</h4>
+                    <span>
+                        lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="../index.html"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Bootstrap Table</a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Basic Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page-header end -->
+<!-- Page-body start -->
+<div class="page-body">
+    <!-- Basic table card start -->
+    <div class="card">
+        <div class="card-header">
+            <h5>Basic Table</h5>
+            <span>use class <code>table</code> inside table element</span>
+
+        </div>
+        <div class="card-block table-border-style">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>HexCode</th>
+                            <th class="operation">
+                                <a asp-action="create" class="btn btn-success">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.HexCode</td>
+                                <td class="operation">
+                                    <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a asp-action="details" asp-route-id="@item.Id" class="btn btn-secondary">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a onclick="removeEntity(event,@item.Id,'@item.Name')" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Basic table card end -->
+</div>
+
+
+@section addjs{
+    <script src="~/libs/sweetalert/sweetalert.min.js"></script>
+
+    <script>
+        function removeEntity(e, id, name) {
+            e.preventDefault();
+
+            swal({
+                title: "Diqqət!",
+                text: `${name} - silinsinmi?`,
+                icon: "warning",
+                buttons: ['Xeyr','Bəli'],
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                      
+                        $.ajax({
+                            url:`@Url.Action("Remove")/${id}`,
+                            type:"POST",
+                            success: function(response) {
+                                console.log(response);
+
+                                if (response.error == false) 
+                                {
+                                  toastr.success(response.message, "Ugur!");
+                                  window.location.reload();    
+                                }
+                                else{
+                                    toastr.error(response.message, "Xəta!");
+                                }
+                            },
+                            error: function(response) {
+                                toastr.error('Sistem xətası.Biraz sonra yenidən yoxlayın', "Xəta!")
+                                console.warn(response);
+                            }
+
+                        });
+
+                    }
+                });
+        }
+    </script>
+}

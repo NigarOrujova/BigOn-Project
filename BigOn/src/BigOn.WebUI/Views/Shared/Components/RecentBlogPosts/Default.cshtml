@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BlogPost>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li class="post-thumb fix">
+            <div class="left-post-thumb f-left mr-20 mb-20">
+                <a asp-controller="Blog" asp-action="Details" asp-route-slug="@item.Slug">
+                    <img class="img" src="~/uploads/images/@item.ImagePath" alt="latest-post-imgae" />
+                </a>
+            </div>
+            <div class="right-post-thumb fix">
+                <h4>
+                    <a asp-controller="Blog" asp-action="Details" asp-route-slug="@item.Slug">
+                        @item.Title
+                    </a>
+                </h4>
+                <span>@item.PublishDate?.ToString("MMMM dd, yyyy")</span>
+            </div>
+        </li>
+    }
+
+</ul>

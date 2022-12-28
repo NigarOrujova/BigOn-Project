@@ -1,0 +1,73 @@
+﻿@model ContactPost
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="map" style="height:400px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d32557543.033047896!2d-52.0331925!3d5.0534957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e8605342744385%3A0x3d3c6dc1394a7fc7!2sAmazon%20Rainforest!5e0!3m2!1sen!2sbd!4v1636533626678!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<div class="contact-email-area ptb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="mb-5">Contact Us</h3>
+                <p class="text-capitalize mb-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        @if (TempData["message"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["message"]
+            </div>
+        }
+
+        <form id="contact-form" class="contact-form" method="post" autocomplete="off">
+            <div class="address-wrapper row">
+                <div class="col-md-12">
+                    <div class="address-fname">
+                        <input asp-for="Name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="address-email">
+                        <input asp-for="Email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="address-subject">
+                        <input asp-for="Subject" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="address-textarea">
+                        <textarea asp-for="Message" placeholder="Write your message" style="resize:none"></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="form-message ml-15"></p>
+            <div class="col-12 footer-content mail-content">
+                <div class="send-email pull-right">
+                    <input type="submit" value="Submit" class="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

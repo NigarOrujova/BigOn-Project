@@ -1,0 +1,8 @@
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\bin\Release\ItemTemplates\CSharp\1033\SeniorToolkit.zip
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\obj\Release\SeniorToolkit.csproj.AssemblyReference.cache
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\obj\Release\_EmptyResource.resources
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\obj\Release\SeniorToolkit.csproj.GenerateResource.cache
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\obj\Release\SeniorToolkit.csproj.CoreCompileInputs.cache
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\obj\Release\CSharp\1033\SeniorToolkit.zip
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\obj\Release\SeniorToolkit.dll
+D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\SeniorToolkit\obj\Release\SeniorToolkit.pdb

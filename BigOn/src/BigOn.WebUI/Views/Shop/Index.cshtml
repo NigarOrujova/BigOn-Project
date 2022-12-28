@@ -1,0 +1,345 @@
+﻿@model PagedViewModel<Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="shop.html">Shop</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+
+<div class="main-shop-page">
+    <div class="container">
+        <!-- Row End -->
+        <div class="row">
+            <!-- Product Categorie List Start -->
+            <div class="col-lg-9 col-lg-push-3 col-md-9 col-md-push-3 order-1">
+                <!-- Single Banner Start -->
+                <div class="single-banner zoom mb-50">
+                    <a href="#"><img src="~/assets/img/banner/13.jpg" alt="slider-banner"></a>
+                </div>
+                <!-- Single Banner End -->
+                <!-- Grid & List View Start -->
+                <div class="grid-list-top border-default universal-padding fix mb-30">
+                    <div class="grid-list-view f-left">
+                        <ul class="list-inline">
+                            <li><a data-bs-toggle="tab" href="#grid-view"><i class="fa fa-th"></i></a></li>
+                            <li class="active"><a data-bs-toggle="tab" href="#list-view"><i class="fa fa-list-ul"></i></a></li>
+                            <li><span class="grid-item-list"> Items 1-12 of 13</span></li>
+                        </ul>
+                    </div>
+                    <!-- Toolbar Short Area Start -->
+                    <div class="main-toolbar-sorter f-right">
+                        <div class="toolbar-sorter">
+                            <label>sort by</label>
+                            <select class="sorter" name="sorter">
+                                <option value="Position" selected="selected">position</option>
+                                <option value="Product Name">Product Name</option>
+                                <option value="Price">Price</option>
+                            </select>
+                            <span><a href="#"><i class="fa fa-arrow-up"></i></a></span>
+                        </div>
+                    </div>
+                    <!-- Toolbar Short Area End -->
+                </div>
+                <!-- Grid & List View End -->
+                <div id="products">
+                    <div class="main-categorie">
+                        <div class="tab-content border-default fix">
+
+                            <div id="grid-view">
+                                <partial name="_Products" model="@Model" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Breadcrumb and Page Show End -->
+            </div>
+            <!-- product Categorie List End -->
+            <!-- Sidebar Shopping Option Start -->
+            <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 order-0">
+                @await Component.InvokeAsync("FilterPanel")
+            </div>
+            <!-- Sidebar Shopping Option End -->
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- Container End -->
+</div>
+<div class="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="main-news-desc">
+                    <div class="news-desc">
+                        <h3>Sign Up For <span>Newsletters</span></h3>
+                        <p>Get e-mail updates about our latest shop and special offers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="newsletter-box">
+                    <form id="newsletter-subscribe" method="post">
+                        <input class="subscribe" placeholder="Enter your email address" name="email" id="subscribe" type="text">
+                        <button type="submit" class="submit">subscribe</button>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8GyNuLKAu4RAgtV_DwJRfP1rJ_14gLytsfYpmPeOqbhjYSkqJv0cPUhxiza4InyyCsSlMERl827j83KISYMNDSoQteHxvU9IQfFOGDu0sHVYP_gRjoDcbYYsdY5AN4pXKYRa7wAjQfjLFmlDfE0UDQc">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section addcss{
+    <style>
+        span.sticker-new.sale {
+            left: 12px;
+            right: auto;
+        }
+
+        .single-product span.sticker-new.sale,
+        .single-product span.sticker-new.soldout,
+        .single-product span.sticker-new.percent,
+        .single-product span.sticker-new.new {
+            color: #fff;
+            background: #4380db;
+        }
+
+        .product-rating {
+            display: flex;
+        }
+
+            .product-rating li {
+                margin-right: 1px;
+            }
+
+        .product_coundown.product_timing {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "";
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 1;
+            visibility: visible;
+            transition: .3s;
+        }
+
+            .product_coundown.product_timing .count {
+                display: inline-block;
+                text-align: center;
+                background: #4380db;
+                color: #fff;
+                padding: 5px 8px;
+                margin: 0 2px;
+                height: 42px;
+            }
+
+        .single-product:hover .product_coundown.product_timing, .single-product:hover .product_coundown.product_timing {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .product_coundown.product_timing .count p {
+            border: 0;
+            height: auto;
+            line-height: 14px;
+            width: auto;
+        }
+
+        .product_coundown.product_timing .count span {
+            background: transparent;
+            color: #fff;
+            width: auto;
+        }
+
+        .thubnail-desc .product_coundown.product_timing {
+            position: static;
+            top: 0;
+            transform: translateY(0);
+            text-align: left;
+        }
+
+            .thubnail-desc .product_coundown.product_timing h5 {
+                margin-bottom: 12px;
+                font-size: 16px;
+            }
+
+            .thubnail-desc .product_coundown.product_timing .count {
+                margin: 0 8px 0 0;
+            }
+
+        [data-entity-type] {
+            position: relative;
+            padding-left: 30px;
+            display: block;
+            cursor: pointer;
+        }
+
+            [data-entity-type]:not(.filled)::before {
+                content: "";
+                font-size: 0.7em;
+                font-weight: 900;
+                font-family: "Font Awesome 5 Free";
+                position: absolute;
+                border: 1px solid #cccccc85;
+                width: 18px;
+                height: 18px;
+                border-radius: 2px;
+                top: 50%;
+                left: 0px;
+                transform: translateY(-50%);
+                text-align: center;
+                text-indent: 1px;
+                line-height: 1.7em;
+            }
+
+            [data-entity-type].active:not(.filled)::before {
+                content: "\f00c";
+                color: #ffffff;
+                background-color: #cccccc85;
+                border-color: #cccccc85;
+            }
+
+            [data-entity-type].filled {
+                width: 30px;
+                height: 25px;
+                border-radius: 2px;
+                border: 1px solid #cccccc85;
+            }
+
+                [data-entity-type].filled::before {
+                    content: "";
+                    display: inline-block;
+                    padding-left: 1px;
+                    line-height: 7pt;
+                    font-size: 5pt;
+                    font-weight: 900;
+                    font-family: "Font Awesome 5 Free";
+                    position: absolute;
+                    top: 1px;
+                    right: 1px;
+                }
+
+                [data-entity-type].filled.active::before {
+                    content: "\f00c";
+                    color: #000000c4;
+                    background-color: #ffffff;
+                    border: 1px solid #000000c4;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 100%;
+                }
+
+
+        #price-range[range]::before {
+            content: attr(range);
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+        }
+    </style>
+ }
+
+
+    @section addjs{
+    <script src="~/libs/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+        const filter = {
+            brands: [],
+            materials: [],
+            colors: [],
+            types: [],
+            sizes: [],
+            min: 0,
+            max: 0
+        };
+
+        function applyFilter(filter) {
+
+            if ($.processId != undefined)
+                clearTimeout($.processId);
+
+            $.processId = setTimeout(function() {
+
+                $.ajax({
+                    type: 'POST',
+                    data: filter,
+                    contentType: 'application/x-www-form-urlencoded',
+                    success: function(response) {
+                        $('#grid-view').html(response);
+                        console.log(response);
+                    },
+                    error: function(response) {
+                        console.error(response);
+                    }
+                });
+            }, 1000);
+        }
+
+        $(document).ready(function() {
+
+            const data = $("#price-range").data();
+
+            $("#price-range")
+                .attr('range', `${data.min}₼ - ${data.max}₼`)
+                .slider({
+                    range: true,
+                    min: data.min,
+                    max: data.max,
+                    values: [data.min, data.max],
+                    slide: function(e, ui) {
+                        $(e.target).attr('range', `${ui.values[0]}₼ - ${ui.values[1]}₼`);
+                        filter.min = ui.values[0];
+                        filter.max = ui.values[1];
+                        applyFilter(filter);
+                    }
+                });
+
+
+            $('a[data-entity-type]').click(function(e) {
+                let values = $(e.currentTarget).data();
+
+                if (filter[`${values.entityType}`].filter(item => item == values.id).length == 0) {
+                    filter[`${values.entityType}`].push(values.id);
+                    $(e.currentTarget).addClass('active');
+                }
+                else {
+                    filter[`${values.entityType}`] = filter[`${values.entityType}`].filter(item => item != values.id);
+                    $(e.currentTarget).removeClass('active');
+                }
+
+                applyFilter(filter);
+            });
+        });
+
+        function addToWishlist(id) {
+            //$.cookie('name', 'value', { expires: 7, path: '/' });
+
+            let wishlist = $.cookie('wishlist');
+
+            if (wishlist == undefined) {
+                wishlist = [];
+            }
+            else {
+                wishlist = JSON.parse(wishlist);
+            }
+            //[1,2,3,4]
+            if (wishlist.filter(item => item == id).length == 0) {
+                wishlist.push(id);
+
+                $.cookie('wishlist', JSON.stringify(wishlist).replace(/"/g,""), { expires: 15, path: '' });
+            }
+        }
+
+    </script>
+        }

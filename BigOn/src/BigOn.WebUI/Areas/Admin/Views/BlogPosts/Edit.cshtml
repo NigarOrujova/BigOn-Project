@@ -1,0 +1,146 @@
+﻿@model BlogPostEditCommand
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="page-header">
+    <div class="row align-items-end">
+        <div class="col-lg-8">
+            <div class="page-header-title">
+                <div class="d-inline">
+                    <h4>Bootstrap Basic Tables</h4>
+                    <span>
+                        lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="../index.html"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Bootstrap Table</a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Basic Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="card">
+        <div class="card-header">
+            <h5>Basic Table</h5>
+            <span>use class <code>table</code> inside table element</span>
+        </div>
+        <div class="card-block table-border-style">
+            <div class="card-block">
+                <h4 class="sub-title">Basic Inputs</h4>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" asp-for="Title"></label>
+                        <div class="col-sm-10">
+                            <input class="form-control" asp-for="Title" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" asp-for="ImagePath"></label>
+                        <div class="col-sm-10">
+                            <label class="image-viewer" for="choose-image" style="background-image:url(/uploads/images/@Model.ImagePath)"></label>
+                            <input class="form-control" id="choose-image" name="image" type="file" accept="image/*" hidden />
+                            <span asp-validation-for="ImagePath" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" asp-for="Body"></label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control editor" id="editor" asp-for="Body"></textarea>
+                            <span asp-validation-for="Body" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" asp-for="CategoryId">Category</label>
+                        <div class="col-sm-10">
+                            <select class="form-control select2"
+                                    asp-for="CategoryId"
+                                    asp-items="@ViewBag.CategoryId"></select>
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Tags</label>
+                        <div class="col-sm-10">
+                            <select class="form-control select2" id="tags" asp-for="TagIds" multiple 
+                            selected-values="@Model.TagIds.ToJsonArray()"
+                            asp-items="@ViewBag.TagId"></select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <input asp-for="Id" type="hidden" />
+                            <button class="btn btn-success mr-2">Save</button>
+                            <a class="btn btn-info" asp-action="index">Go Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section addcss{
+    <link rel="stylesheet" href="~/libs/select2/css/select2.min.css" />
+}
+
+    @section addjs{
+    <script src="~/libs/select2/js/select2.full.js"></script>
+    <script src="~/libs/ckeditor5/ckeditor.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
+
+            $('.select2').select2();
+
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function(e) {
+
+                const viewer = document.querySelector('.image-viewer');
+                viewer.setAttribute('style', `background-image:url(${reader.result})`);
+                console.log(reader.result);
+            });
+
+
+            document.querySelector('#choose-image').addEventListener('change', function(e) {
+                //console.log(e.currentTarget.files[0]);
+                reader.readAsDataURL(e.currentTarget.files[0]);
+            });
+
+
+            $('select[selected-values]').each(function(index, item) { 
+            
+                console.log(index, item);
+
+                const tagIds = JSON.parse($(item).attr('selected-values'));
+
+                $(item).val(tagIds);
+                $(item).trigger('change');
+            });
+        });
+    </script>
+}

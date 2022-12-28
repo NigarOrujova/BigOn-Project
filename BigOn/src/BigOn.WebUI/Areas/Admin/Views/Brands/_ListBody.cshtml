@@ -1,0 +1,52 @@
+﻿@model PagedViewModel<Brand>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th class="operation">
+                @if (User.HasAccess("admin.brands.create"))
+                {
+                    <a asp-action="create" class="btn btn-success">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                }
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td class="operation">
+                    @if (User.HasAccess("admin.brands.edit"))
+                    {
+                        <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    }
+
+                    @if (User.HasAccess("admin.brands.details"))
+                    {
+                        <a asp-action="details" asp-route-id="@item.Id" class="btn btn-secondary">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    }
+
+                    @if (User.HasAccess("admin.brands.remove"))
+                    {
+                        <a onclick="removeEntity(event,@item.Id,'@item.Name')" class="btn btn-danger">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Model.GetPager(Url,"Index",area:"admin",paginateFunction:"goPage")
+
+
+

@@ -1,0 +1,68 @@
+﻿@model PagedViewModel<Product>
+
+
+
+@foreach (var item in Model.Items)
+{
+    <div class="single-product" style="background-image:url(/uploads/images/@item.Images.FirstOrDefault()?.Path);">
+        <!-- Product Image Start -->
+        <div class="pro-img">
+            <a href="/shop/details/27"></a>
+        </div>
+
+        <div class="pro-content">
+            <h4 class="popup_cart_title">
+                <a href="/shop/details/27">
+                    @item.Name
+                </a>
+            </h4>
+            <ul class="product-rating">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <p>
+                <span class="price">
+                    <span class="money" data-currency-usd="66.9900">
+                        66.99
+                    </span>
+                </span>
+                <del class="prev-price">
+                    <span class="money" data-currency-usd="77.00">
+                        77.00
+                    </span>
+                </del>
+
+            </p>
+            <div class="pro-actions">
+
+                <div class="actions-primary">
+                    <a href="javascript:void(0);" class="action-btn"
+                   onclick="Shopify.addItem(7602342625331, 1); return false;"
+                   title="" data-toggle="tooltip" data-original-title="Add to Cart">
+                        <span class="addto">Add To Cart</span>
+                    </a>
+                </div>
+                <div class="actions-secondary">
+                    <a class="action--wishlist tile-actions--btn flex wishlist-btn wishlist"
+                       href="javascript:addToWishlist(@item.Id)"
+                    button-wishlist="" data-product-handle="accusantium-doloremque">
+                        <i class="fa fa-heart-o" data-toggle="tooltip" title="" data-original-title="Add to Wishlist"></i>
+                        @*<i class="fa fa-circle-o-notch fa-spin"></i>*@
+                        @*<i class="fa fa-heart" data-toggle="tooltip" title="" data-original-title="Remove Wishlist"></i>*@
+                    </a>
+                    <a href="javascript:void(0);" class="action-btn quick-view"
+                   onclick="quiqview('accusantium-doloremque')"
+                   data-toggle="modal" data-target="#quickViewModal">
+                        <i class="fa fa-eye" data-toggle="tooltip" title="" data-original-title="Quickview"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <span class="sticker-new sale">Sale</span>
+        <span class="sticker-new percent">-13%</span>
+    </div>
+}

@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "Basket";
+}
+
+
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="cart.html">Product</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="cart-main-area pb-50">
+    <div class="container">
+        <h2 class="text-capitalize sub-heading">cart</h2>
+        <div class="row">
+            <div class="col-md-12 col-12 col-12">
+                <form method="post">
+                    <div class="table-content table-responsive mb-50">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product-thumbnail">Image</th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-price">Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-subtotal">Total</th>
+                                    <th class="product-remove">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr class="basket-item-21">
+                                        <td class="product-thumbnail">
+                                            <a target="_blank" href="/shop/details/21">
+                                                <img src="~/uploads/images/blog-9808a023-ece8-4e3a-9d53-46739774b1cf.jpg" alt="cart-image" />
+                                            </a>
+                                        </td>
+                                        <td class="product-name">
+                                            <a target="_blank" href="/shop/details/21">Gri Erkek 2 &#x130;p &#x15E;ardonlu Kap&#xFC;&#x15F;onlu Kanguru Cep Sweatshirt </a>
+                                        </td>
+                                        <td class="product-price">
+                                            <span class="amount">40.00&#x20BC;</span>
+                                        </td>
+                                        <td class="product-quantity">
+                                            <input type="number" data-product-id="21" min="1" onchange="changeQuantity(event,this)" value="1" />
+                                        </td>
+                                        <td class="product-subtotal">40.00&#x20BC;</td>
+                                        <td class="product-remove">
+                                            <a onclick="removeFromBasket(this, 'Gri Erkek 2 &#x130;p &#x15E;ardonlu Kap&#xFC;&#x15F;onlu Kanguru Cep Sweatshirt ');return" 
+                                            data-product-id="21"
+                                            aria-remove-target=".basket-item-21">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-sm-7 col-12">
+                            <div class="buttons-cart">
+                                <a href="/shop">Alışverişə davam edin</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-5 col-12">
+                            <div class="cart_totals">
+                                <h2>Cart Totals</h2>
+                                <br />
+                                <table>
+                                    <tbody>
+                                        <tr class="order-total">
+                                            <th>Total</th>
+                                            <td>
+                                                <strong><span class="amount" id="summary">40.00&#x20BC;</span></strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="wc-proceed-to-checkout">
+                                    <a href="/checkout">Ödəmək</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<ProductSize>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Page-header start -->
+<div class="page-header">
+    <div class="row align-items-end">
+        <div class="col-lg-8">
+            <div class="page-header-title">
+                <div class="d-inline">
+                    <h4>Bootstrap Basic Tables</h4>
+                    <span>
+                        lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="../index.html"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Bootstrap Table</a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Basic Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page-header end -->
+<!-- Page-body start -->
+<div class="page-body">
+    <!-- Basic table card start -->
+    <div class="card">
+        <div class="card-header">
+            <h5>Basic Table</h5>
+            <span>use class <code>table</code> inside table element</span>
+
+        </div>
+        <div class="card-block table-border-style">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Small Name</th>
+                            <th class="operation">
+                                <a asp-action="create" class="btn btn-success">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="dynamic-body">
+                        <partial name="_ListBody" model="@Model" />
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Basic table card end -->
+</div>
+
+
+@section addjs{
+    <script src="~/libs/sweetalert/sweetalert.min.js"></script>
+
+    <script>
+        function removeEntity(e, id, name) {
+            e.preventDefault();
+
+            swal({
+                title: "Diqqət!",
+                text: `${name} - silinsinmi?`,
+                icon: "warning",
+                buttons: ['Xeyr', 'Bəli'],
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+
+                        $.ajax({
+                            url: `@Url.Action("Remove")/${id}`,
+                            type: "POST",
+                            success: function(response) {
+                                if (/[<>]+/g.test(response)==true) {
+                                     $('#dynamic-body').html(response);
+                                }
+                                else {
+                                    toastr.error(response.message, "Xəta!");
+                                }
+                            },
+                            error: function(response) {
+                                toastr.error('Sistem xətası.Biraz sonra yenidən yoxlayın', "Xəta!")
+                                console.warn(response);
+                            }
+
+                        });
+
+                    }
+                });
+        }
+    </script>
+}

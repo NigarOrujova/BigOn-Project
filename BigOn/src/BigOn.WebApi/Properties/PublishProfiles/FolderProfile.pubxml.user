@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Solutions\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.WebApi\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>True|2022-11-12T07:26:09.4172668Z;True|2022-11-12T10:41:04.9905962+04:00;True|2022-11-07T14:43:24.2669457+04:00;</History>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,121 @@
+﻿
+
+<nav class="pcoded-navbar">
+    <div class="pcoded-inner-navbar main-menu">
+        <div class="pcoded-navigatio-lavel">Ümumi</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li>
+                <a asp-controller="home" asp-action="index">
+                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                    <span class="pcoded-mtext">Ana səhifə</span>
+                </a>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
+                    <span class="pcoded-mtext">Məhsullar</span>
+                </a>
+                <ul class="pcoded-submenu">
+
+                    @if (User.HasAccess("admin.brands.index"))
+                    {
+                        <li>
+                            <a asp-controller="Brands" asp-action="index">
+                                <span class="pcoded-mtext">Markalar</span>
+                            </a>
+                        </li>
+                    }
+
+                    @if (User.HasAccess("admin.categories.index"))
+                    {
+                        <li>
+                            <a asp-controller="Categories" asp-action="Index">
+                                <span class="pcoded-mtext">Kategoriyalar</span>
+                            </a>
+                        </li>
+                    }
+
+                    @if (User.HasAccess("admin.colors.index"))
+                    {
+                        <li>
+                            <a asp-controller="colors" asp-action="index">
+                                <span class="pcoded-mtext">Rənglər</span>
+                            </a>
+                        </li>
+                    }
+
+
+
+                    <li>
+                        <a asp-controller="sizes" asp-action="index">
+                            <span class="pcoded-mtext">Ölçülər</span>
+                            <span class="pcoded-badge label label-info ">NEW</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="materials" asp-action="index">
+                            <span class="pcoded-mtext">Materials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="types" asp-action="index">
+                            <span class="pcoded-mtext">Types</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-clipboard"></i></span>
+                    <span class="pcoded-mtext">Paylaşımlar</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li>
+                        <a asp-controller="BlogPosts" asp-action="index">
+                            <span class="pcoded-mtext">Hamısı</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="pcoded-mtext">Dərc edilmiş paylaşımlar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="default/dashboard-analytics.html">
+                            <span class="pcoded-mtext">Silinmiş paylaşımlar</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a asp-controller="faqs" asp-action="index">
+                    <span class="pcoded-micon">
+                        <i class="feather icon-tag"></i>
+                    </span>
+                    <span class="pcoded-mtext">Faqs</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="pcoded-navigatio-lavel">Tənzimləmələr</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li>
+                <a asp-controller="Users" asp-action="Index">
+                    <span class="pcoded-micon">
+                        <i class="feather icon-user"></i>
+                    </span>
+                    <span class="pcoded-mtext">İstifadəçilər</span>
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Roles" asp-action="index">
+                    <span class="pcoded-micon">
+                        <i class="feather icon-users"></i>
+                        </span>
+                    <span class="pcoded-mtext">Rollar</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

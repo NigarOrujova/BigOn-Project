@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ProductSize>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.ShortName</td>
+        <td class="operation">
+            <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">
+                <i class="fa fa-pencil"></i>
+            </a>
+            <a asp-action="details" asp-route-id="@item.Id" class="btn btn-secondary">
+                <i class="fa fa-eye"></i>
+            </a>
+            <a onclick="removeEntity(event,@item.Id,'@item.Name')" class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+            </a>
+        </td>
+    </tr>
+}

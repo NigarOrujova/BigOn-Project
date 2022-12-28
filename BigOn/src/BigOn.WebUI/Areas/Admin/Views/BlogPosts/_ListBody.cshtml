@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BlogPost>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td class="image-cell">
+            @if (!string.IsNullOrWhiteSpace(item.ImagePath))
+            {
+                <img src="~/uploads/images/@item.ImagePath" />
+            }
+        </td>
+        <td class="cell-medium">
+            @item.Title
+        </td>
+        <td class="cell-medium">
+            @item.Body.ToPlainText()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublishDate)
+        </td>
+        <td class="operation">
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                <i class="fa fa-pencil"></i>
+            </a>
+            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">
+                <i class="fa fa-eye"></i>
+            </a>
+            <a class="btn btn-sm btn-danger" onclick="removeEntity(@item.Id,'@item.Title')">
+                <i class="fa fa-trash"></i>
+            </a>
+        </td>
+    </tr>
+}

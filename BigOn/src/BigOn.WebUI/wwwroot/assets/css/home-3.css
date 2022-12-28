@@ -1,0 +1,146 @@
+.main-multi-product .owl-nav div:hover,
+.new-pro-active .owl-nav div:hover,
+.deal-pro-active .owl-nav div:hover,
+.best-selling-pro .owl-nav div:hover,
+.blog-active .owl-nav div:hover,
+.random-pro-active .owl-nav div:hover,
+.testimonial__container .dcare-arrow:hover,.home-2-new-pro-active .owl-nav div:hover,.home-2 .best-seller-pro .owl-nav div:hover  {
+    border-color: #e32727;
+    background: #e32727;
+    color: #fff;
+}
+.footer-social-content li a:hover{
+    background: #e32727;
+}
+.footer-bottom-content p a:hover,.category-sub li:hover a{
+    color: #e32727;
+}
+.header-top{
+    border-bottom: 1px solid #e95252
+}
+.header-top.off-white-bg,.header-middle.white-bg{
+    background: #232f3e;
+    color: #fff;
+}
+.actions-primary a:hover,
+.actions-secondary a:hover,.single-categorie a.cat-link:hover {
+    background: #e32727;
+    color: #fff;
+}
+.testimonial__container .tes__img__slide .testimonial__img.slick-active.slick-center span,.testimonial__container .tes__img__slide .testimonial__img span:hover {
+    border-color: #e32727;
+}
+.search-box-view .submit,.newsletter-box .submit,.home-3.header-sticky.sticky{
+    background: #e32727;
+}
+.search-box-view .submit,.newsletter-box .submit:hover{
+    color: #fff;
+}
+.header-list-menu > li > a,.header-list-menu > li i,.middle-menu-list > li> a{
+    color: #fff;
+}
+.news-desc h3 span,.single-footer li:hover a,
+.pro-content h4:hover a,.single-categorie li a:hover{
+    color: #e32727;
+}
+.cart-box > ul > li > a{
+    color: #fff;
+}
+.cart-box > ul > li > a:hover{
+    color: #fff;
+}
+.search-box-view .submit:hover {
+  background: #f1f1f1 none repeat scroll 0 0;
+}
+.middle-menu-list > li > ul.ht-dropdown > li:hover > a.middle-menu-list > li > ul.ht-dropdown li:hover> a{
+    color: #e32727;
+}
+.middle-menu-list > li:first-child >a,.middle-menu-list > li:hover >a{
+    color: #fff;
+}
+.header-list-menu > li > ul.ht-dropdown > li:hover a,
+.megamenu-three-column > ul > li ul > li:hover > a,
+.catergorie-product .single-product .pro-content h4 a:hover,
+.cat-list li a:hover,
+.middle-menu-list > li > ul.ht-dropdown > li:hover > a,.vertical-menu-list > li:hover > a {
+    color: #e32727;
+}
+.header-list-menu > li:hover > a{
+    color: #fff;
+}
+.count p{
+    background: #e32727;
+    color: #fff;
+}
+.count span{
+    font-weight: 500;
+}
+.header-top.off-white-bg,.header-middle.white-bg{
+    background: #e32727;
+    color: #fff;
+}
+.black-bg{
+    background: #e32727;
+}
+.search-box-style-three .email,.vertical-menu > span {
+    background: #cc1e1e;
+    color: #fff;
+}
+.vertical-menu-list{
+    border-color: #cc1e1e;
+}
+.search-box-style-three .submit{
+    color: #444;
+    background: #fff;
+}
+.cart-box ul li a span {
+    background: #fff none repeat scroll 0 0;
+    color: #ea3a3c;
+    top: 4px;
+}
+.vertical-menu-list > li:hover > a{
+    color: #e32727;
+}
+
+
+.search-box-style-three input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+}
+.search-box-style-three input:-ms-input-placeholder { /* IE 10+ */
+    color: #fff;
+}
+.search-box-style-three input:-moz-placeholder {
+   color: #fff;
+}
+.search-box-style-three input::placeholder {
+   color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

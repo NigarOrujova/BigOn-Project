@@ -1,0 +1,720 @@
+﻿<!doctype html>
+<html class="no-js" lang="en-US">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home || Bigon Ecommerce Bootstrap Template</title>
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="E-commerce" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/icon/favicon.png">
+    <!-- google font rubik -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,600" rel="stylesheet">
+    <!-- mobile menu css -->
+    <link rel="stylesheet" href="~/assets/css/meanmenu.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <!-- nivo slider css -->
+    <link rel="stylesheet" href="~/assets/css/nivo-slider.css">
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <!-- slick css -->
+    <link rel="stylesheet" href="~/assets/css/slick.css">
+    <!-- price slider css -->
+    <link rel="stylesheet" href="~/assets/css/jquery-ui.min.css">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <!-- default css  -->
+    <link rel="stylesheet" href="~/assets/css/default.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+
+    @RenderSection("addcss",required:false)
+
+    <style>
+        .middle-menu a.active {
+            color: #4380db;
+        }
+
+        .cart-counter:empty {
+            display: none !important;
+        }
+    </style>
+    <!-- modernizr js -->
+    <script src="~/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://kit.fontawesome.com/1154e1d6ee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        <!-- Newsletter Popup Start -->
+        <!-- <div class="popup_wrapper  d-none d-md-block">
+            <div class="test">
+                <span class="popup_off">Close</span>
+                <div class="subscribe_area text-center mt-60">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to the Gatcomart mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+                    <div class="subscribe-form-group">
+                        <form action="#">
+                            <input autocomplete="off" type="text" name="message" id="message" placeholder="Enter your email address">
+                            <button type="submit">subscribe</button>
+                        </form>
+                    </div>
+                    <div class="subscribe-bottom mt-15">
+                        <input type="checkbox" id="newsletter-permission">
+                        <label for="newsletter-permission">Don't show this popup again</label>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Newsletter Popup End -->
+        <!-- Header Area Start -->
+        <header>
+            <!-- Header Top Start -->
+            <div class="header-top off-white-bg">
+                <div class="container">
+                    <div class="row">
+                        <!-- Header Top left Start -->
+                        <div class="header-top-left col-8 col-md-3">
+                            <ul class="header-list-menu d-flex flex-wrap">
+                                <!-- Currency Start -->
+                                <li>
+                                    <a href="#">Us Dollar<i class="fa fa-angle-down"></i></a>
+                                    <ul class="ht-dropdown">
+                                        <li><a href="#">USD</a></li>
+                                        <li><a href="#">GBP</a></li>
+                                        <li><a href="#">EUR</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Currency End -->
+                                <!-- Language Start -->
+                                <li>
+                                    <a href="#">English<i class="fa fa-angle-down"></i></a>
+                                    <ul class="ht-dropdown">
+                                        <li><a href="#">Spanish</a></li>
+                                        <li><a href="#">Bengali</a></li>
+                                        <li><a href="#">Russian</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Language End -->
+                            </ul>
+                            <!-- Header-list-menu End -->
+                        </div>
+                        <!-- Header Top left End -->
+                        <!-- Header Top Right Start -->
+                        <div class="header-top-right col-4 col-md-9">
+                            <ul class="header-list-menu right-menu d-flex justify-content-end">
+                                <li class="d-none d-md-flex justify-content-end"><span><i class="fa fa-phone"></i> Ordered before 17:30, shipped today  - Support: (012) 800 456 789</span></li>
+                                <li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="fa fa-cog"></i>Tənzimləmələr
+                                        </a>
+                                        <ul class="ht-dropdown ht-account">
+                                            <li><a href="account.html">Hesabım</a></li>
+                                            @if (User.HasAccess("admin.home.index"))
+                                            {
+                                                <li>
+                                                    <a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
+                                                </li>
+                                            }
+                                            <li><a asp-controller="shop" asp-action="wishlist">Bəyəndiklərim</a></li>
+                                            <li><a asp-controller="Account" asp-action="Signout">Çıxış</a></li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="Signin" class="d-flex align-items-center">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Daxil ol
+                                        </a>
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle white-bg header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-5 col-md-3">
+                            <!-- Logo Start -->
+                            <div class="logo d-none d-md-block">
+                                <a href="index.html"><img src="~/assets/img/logo/logo.png" alt="logo-image"></a>
+                            </div>
+                            <!-- Logo End -->
+                            <div class="d-md-none full-col plr-0">
+                                <!-- Logo Start -->
+                                <div class="logo">
+                                    <a href="index.html"><img src="~/assets/img/logo/logo.png" alt="logo-image"></a>
+                                </div>
+                                <!-- Logo End -->
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 d-none d-md-block">
+                            <!-- Header Middle Menu Start -->
+                            <div class="middle-menu">
+                                <nav>
+                                    <ul class="middle-menu-list">
+                                        <li>
+                                            <a asp-controller="home" asp-action="index">home</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="home" asp-action="about">about us</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="home" asp-action="faqs">faqs</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="home" asp-action="contact">contact us</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="blog" asp-action="index">blog</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="shop" asp-action="index">Shop</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- Header Middle Menu End -->
+                        </div>
+                        <!-- Cartt Box Start -->
+                        <div class="col-7 col-md-12 full-col fl-r d-md-none">
+                            <div class="cart-box">
+                                <ul class=" pe-5 text-end">
+                                    <li>
+                                        <a asp-controller="shop" asp-action="wishlist">
+                                            <i class="fa fa-heart-o"></i>
+                                            <span class="cart-counter">2</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="compare.html"><i class="fa fa-signal"></i></a></li>
+                                    <li>
+                                        <a asp-controller="Shop" asp-action="Basket">
+                                            <i class="fa fa-shopping-basket"></i>
+                                            <span class="cart-counter">2</span>
+                                        </a>
+                                        <ul class="ht-dropdown main-cart-box">
+                                            <li>
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#"><img src="~/assets/img/menu/1.jpg" alt="cart-image"></a>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6><a href="product.html">Alpha Block Black Polo T-Shirt</a></h6>
+                                                        <span>1 × $399.00</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#"><i class="fa fa-window-close-o"></i></a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#"><img src="~/assets/img/menu/2.jpg" alt="cart-image"></a>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6><a href="product.html">Red Printed Round Neck T-Shirt</a></h6>
+                                                        <span>2 × $299.00</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#"><i class="fa fa-window-close-o"></i></a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Footer Inner Start -->
+                                                <div class="cart-footer fix">
+                                                    <h5>total :<span class="f-right">$698.00</span></h5>
+                                                    <div class="cart-actions">
+                                                        <a class="checkout" href="checkout.html">Checkout</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Cart Footer Inner End -->
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="search-bar-xs d-none">
+                                        <a href="#"><i class="fa fa-search"></i></a>
+                                        <div class="ht-dropdown search-box-view">
+                                            <form action="#">
+                                                <input type="text" class="email" placeholder="Search for item..." name="email">
+                                                <button type="submit" class="submit"></button>
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Cartt Box End -->
+                        <!-- Mobile Menu  Start -->
+                        <div class="col-12 d-md-none">
+                            <div class="mobile-menu">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html">home</a>
+                                            <!-- Home Version Dropdown Start -->
+                                            <ul>
+                                                <li><a href="index.html">Home Version 1</a></li>
+                                                <li><a href="index-2.html">Home Version 2</a></li>
+                                                <li><a href="index-3.html">Home Version 3</a></li>
+                                                <li><a href="index-4.html">Home Version 4</a></li>
+                                            </ul>
+                                            <!-- Home Version Dropdown End -->
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">shop</a>
+                                            <!-- Mobile Menu Dropdown Start -->
+                                            <ul>
+                                                <li><a href="product.html">product details</a></li>
+                                                <li><a href="compare.html">compare</a></li>
+                                                <li><a href="cart.html">cart</a></li>
+                                                <li><a href="checkout.html">checkout</a></li>
+                                                <li><a asp-controller="shop" asp-action="wishlist">wishlist</a></li>
+                                            </ul>
+                                            <!-- Mobile Menu Dropdown End -->
+                                        </li>
+                                        <li>
+                                            <a href="blog.html">Blog</a>
+                                            <!-- Mobile Menu Dropdown Start -->
+                                            <ul>
+                                                <li><a href="blog-details.html">blog details</a></li>
+                                            </ul>
+                                            <!-- Mobile Menu Dropdown End -->
+                                        </li>
+                                        <li>
+                                            <a href="#">pages</a>
+                                            <!-- Mobile Menu Dropdown Start -->
+                                            <ul>
+                                                <li><a href="login.html">login</a></li>
+                                                <li><a href="register.html">register</a></li>
+                                                <li><a href="404.html">404</a></li>
+                                            </ul>
+                                            <!-- Mobile Menu Dropdown End -->
+                                        </li>
+                                        <li><a href="about.html">about us</a></li>
+                                        <li><a href="contact.html">contact us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu  End -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Header Middle End -->
+            <!-- Header Bottom Start -->
+            <div class="header-bottom black-bg d-none d-md-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 d-none full-col">
+                            <!-- Logo Start -->
+                            <div class="logo">
+                                <a href="index.html"><img src="~/assets/img/logo/logo.png" alt="logo-image"></a>
+                            </div>
+                            <!-- Logo End -->
+                        </div>
+                        <!-- Primary Vertical-Menu Start -->
+                        <div class="col-lg-3 col-md-4 d-none d-md-block">
+                            @await Component.InvokeAsync("AllCategories")
+                        </div>
+                        <!-- Primary Vertical-Menu End -->
+                        <!-- Search Box Start -->
+                        <div class="col-lg-6 col-md-5 d-none d-md-block ">
+                            <div class="search-box-view fix position-relative">
+                                <form action="#">
+                                    <input type="text" class="email" placeholder="Search for item..." name="email">
+                                    <button type="submit" class="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Search Box End -->
+                        <!-- Cartt Box Start -->
+                        <div class="col-lg-3 col-md-3 col-6 full-col fl-r">
+                            <div class="cart-box">
+                                <ul class="text-end">
+                                    <li>
+                                        <a asp-controller="shop" asp-action="wishlist">
+                                            <i class="fa fa-heart-o"></i>
+                                            <span class="cart-counter">2</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="compare.html"><i class="fa fa-signal"></i></a></li>
+                                    <li>
+                                        <a asp-controller="Shop" asp-action="Basket">
+                                            <i class="fa fa-shopping-basket"></i>
+                                            <span class="cart-counter">2</span>
+                                        </a>
+                                        <ul class="ht-dropdown main-cart-box">
+                                            <li>
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#"><img src="~/assets/img/menu/1.jpg" alt="cart-image"></a>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6><a href="product.html">Alpha Block Black Polo T-Shirt</a></h6>
+                                                        <span>1 × $399.00</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#"><i class="fa fa-window-close-o"></i></a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#"><img src="~/assets/img/menu/2.jpg" alt="cart-image"></a>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6><a href="product.html">Red Printed Round Neck T-Shirt</a></h6>
+                                                        <span>2 × $299.00</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#"><i class="fa fa-window-close-o"></i></a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Footer Inner Start -->
+                                                <div class="cart-footer fix">
+                                                    <h5>total :<span class="f-right">$698.00</span></h5>
+                                                    <div class="cart-actions">
+                                                        <a class="checkout" href="checkout.html">Checkout</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Cart Footer Inner End -->
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="search-bar-xs d-none">
+                                        <a href="#"><i class="fa fa-search"></i></a>
+                                        <div class="ht-dropdown search-box-view">
+                                            <form action="#">
+                                                <input type="text" class="email" placeholder="Search for item..." name="email">
+                                                <button type="submit" class="submit"></button>
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Cartt Box End -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Header Bottom End -->
+        </header>
+        <!-- Header Area End -->
+        <!-- Mobile Vertical Menu Start -->
+        <div class="mobile-vertical-menu d-md-none vertical-style-one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Primary Vertical-Menu Start -->
+                        <div class="vertical-menu">
+                            <span class="categorie-title">all Categories </span>
+                            <nav>
+                                <ul class="vertical-menu-list menu-hidden">
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/1.png" alt="menu-icon"></span>Computer</a></li>
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/2.png" alt="menu-icon"></span>Kitchen</a></li>
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/3.png" alt="menu-icon"></span>Smart Phone</a></li>
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/4.png" alt="menu-icon"></span>Fashion</a></li>
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/5.png" alt="menu-icon"></span>Tablet</a></li>
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/6.png" alt="menu-icon"></span>Electtronic</a></li>
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/7.png" alt="menu-icon"></span>Books</a></li>
+                                    <li><a href="shop.html"><span><img src="~/assets/img/vertical-menu/8.png" alt="menu-icon"></span>Sports</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Primary Vertical Menu End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Vertical-Menu End -->
+        @if (TempData["InfoMessage"] != null)
+        {
+            <div class="alert alert-warning">
+                @TempData["InfoMessage"]
+            </div>
+        }
+        @RenderBody()
+
+        <footer class="black-o-bg">
+            <!-- Footer Top Start -->
+            <div class="footer-top ptb-75">
+                <div class="container">
+                    <div class="row">
+                        <!-- Single Footer Start -->
+                        <div class="col-md-4 col-sm-4 col-12">
+                            <div class="single-footer">
+                                <h3>Contacts us</h3>
+                                <div class="footer-content">
+                                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                                    <span>Payment methods:</span>
+                                    <p><a href="#"><img class="img" src="~/assets/img/footer/1.png" alt="payment-image"></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                        <!-- Single Footer Start -->
+                        <div class="col-md-2 col-sm-4 col-6 footer-full">
+                            <div class="single-footer">
+                                <h3 class="footer-title">Information</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list">
+                                        <li><a href="#">Site Map</a></li>
+                                        <li><a href="#">Specials</a></li>
+                                        <li><a href="#">Jobs</a></li>
+                                        <li><a href="#">Delivery Information</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                        <!-- Single Footer Start -->
+                        <div class="col-md-2 col-sm-4 col-6 footer-full">
+                            <div class="single-footer">
+                                <h3 class="footer-title">My Account</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list">
+                                        <li><a href="account.html">My account</a></li>
+                                        <li><a href="#">Checkout</a></li>
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="#">address</a></li>
+                                        <li><a href="#">Order status</a></li>
+                                        <li><a href="#">Site Map</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                        <!-- Single Footer Start -->
+                        <div class="col-md-2 col-sm-4 col-6 footer-full">
+                            <div class="single-footer">
+                                <h3 class="footer-title">customer service</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list">
+                                        <li><a href="account.html">My account</a></li>
+                                        <li><a href="#">New</a></li>
+                                        <li><a href="#">Gift Cards</a></li>
+                                        <li><a href="#">Return Policy</a></li>
+                                        <li><a href="#">Your Orders</a></li>
+                                        <li><a href="#">Subway</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                        <!-- Single Footer Start -->
+                        <div class="col-md-2 col-sm-4 col-6 footer-full">
+                            <div class="single-footer">
+                                <h3 class="footer-title">Let Us Help You</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list">
+                                        <li><a href="#">Your Account</a></li>
+                                        <li><a href="#">Your Orders</a></li>
+                                        <li><a href="#">Shipping</a></li>
+                                        <li><a href="#">Amazon Prime</a></li>
+                                        <li><a href="#">Replacements</a></li>
+                                        <li><a href="#">Manage </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Footer Top End -->
+            <!-- Footer Middle Start -->
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="footer-middle-content ptb-40">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Footer Link Start -->
+                                <div class="footer-link">
+                                    <ul class="footer-link-list">
+                                        <li>
+                                            <span class="title">Computer</span>
+                                            <a href="#">Laptops</a> / <a href="#">Television &amp; Video</a> / <a href="#">Tablet &amp; PC</a> / <a href="#"> Computers Accessories</a> / <a href="#">tablet-1</a> / <a href="#">tablet-2</a> / <a href="#">tablet-3</a> / <a href="#">tablet-4</a>
+                                        </li>
+                                        <li>
+                                            <span class="title">Desktops</span>
+                                            <a href="#">Desktops-1</a> / <a href="#">Desktops-2</a> / <a href="#">Desktops-3</a> / <a href="#">Desktops-4</a> / <a href="#">Desktops-5</a> / <a href="#">Desktops-6</a> / <a href="#">Desktops-7</a>
+                                        </li>
+                                        <li>
+                                            <span class="title">Camera</span>
+                                            <a href="#">Camera-1</a> / <a href="#">Camera-2</a> / <a href="#">Camera-3</a> / <a href="#">Camera-4</a> / <a href="#">Camera-5</a> / <a href="#">Camera-6</a> / <a href="#">Camera-7</a>
+                                        </li>
+                                        <li>
+                                            <span class="title">Smartphone</span>
+                                            <a href="#">Desktops-1</a> / <a href="#">Desktops-2</a> / <a href="#">Desktops-3</a> / <a href="#">Desktops-4</a> / <a href="#">Desktops-5</a> / <a href="#">Desktops-6</a> / <a href="#">Desktops-7</a>
+                                        </li>
+                                        <li>
+                                            <span class="title">Cell phone</span>
+                                            <a href="#">phone-1</a> / <a href="#">phone-2</a> / <a href="#">phone-3</a> / <a href="#">phone-4</a> / <a href="#">phone-5</a> / <a href="#">phone-6</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Footer Link End -->
+                            </div>
+                        </div>
+                        <!-- Row End -->
+                    </div>
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Footer Middle End -->
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom ptb-40">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <p class="pt-10">Copyright © <a href="#">Bigon</a> All Rights Reserved.</p>
+                        <div class="footer-social-content">
+                            <ul class="social-content-list">
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-wifi"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Footer Bottom End -->
+        </footer>
+        <!-- Footer End -->
+    </div>
+    <!-- Wrapper End -->
+    <!-- jquery 3.12.4 -->
+    <script src="~/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="~/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/assets/js/vendor/jquery-migrate-1.4.1.min.js"></script>
+    <!-- mobile menu js  -->
+    <script src="~/assets/js/jquery.meanmenu.min.js"></script>
+    <!-- scroll-up js -->
+    <script src="~/assets/js/jquery.scrollUp.js"></script>
+    <!-- owl-carousel js -->
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <!-- slick js -->
+    <script src="~/assets/js/slick.min.js"></script>
+    <!-- wow js -->
+    <script src="~/assets/js/wow.min.js"></script>
+    <!-- price slider js -->
+    <script src="~/assets/js/jquery-ui.min.js"></script>
+    <script src="~/assets/js/jquery.countdown.min.js"></script>
+    <!-- nivo slider js -->
+    <script src="~/assets/js/jquery.nivo.slider.js"></script>
+    <!-- bootstrap -->
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- plugins -->
+    <script src="~/assets/js/plugins.js"></script>
+    <!-- main js -->
+    <script src="~/assets/js/main.js"></script>
+
+
+    <form class="modal" tabindex="-1" id="softlogin" method="post" autocomplete="off">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sistemə daxil olun</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group form-primary">
+                        <input id="username" class="form-control" placeholder="Email or UserName"
+                               name="UserName" />
+                    </div>
+                    <div class="form-group form-primary">
+                        <input id="password" class="form-control"
+                               placeholder="Password" name="Password" type="password" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success">Daxil Ol</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $.ajaxSetup({
+                statusCode: {
+                    401: function() {
+
+                        $('#softlogin')
+                            .modal({
+                                backdrop: 'static',
+                                keyboard: true
+                            })
+                            .modal('show');
+                    }
+                }
+            });
+
+            $('#softlogin').submit(function(e) {
+
+                e.preventDefault();
+
+                e.currentTarget.reset();
+                $(e.currentTarget).modal('hide');
+                return;
+
+                $.ajax({
+
+                });
+
+            });
+
+
+            $('#frmNewsletter').submit(function(e) {
+                e.preventDefault();
+
+                let fd = new FormData(e.currentTarget);
+
+                $.ajax({
+                    url: '@Url.Action("Subscribe","Home")',
+                    type: 'post',
+                    data: fd,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        console.log(response);
+                    },
+                    error: function(response) {
+                        console.warn(response);
+                    }
+                });
+            });
+
+            $(`.middle-menu a[href='${location.pathname}']`).addClass('active');
+
+        });
+    </script>
+
+    @RenderSection("addjs",required:false)
+
+</body>
+</html>

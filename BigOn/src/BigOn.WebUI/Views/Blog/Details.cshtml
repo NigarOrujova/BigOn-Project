@@ -1,0 +1,193 @@
+﻿@model BlogPost
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="blog-details.html">Blog Details</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+<!-- Blog Area Start -->
+<div class="blog-area pb-50">
+    <div class="container">
+        <div class="row">
+            <!-- Main Blog Start -->
+            <div class="col-lg-8 col-12">
+                <!-- Blog Details Start -->
+                <div class="blog-details">
+                    <div class="blog-img">
+                        <img src="~/uploads/images/@Model.ImagePath" alt="blog-image">
+                    </div>
+                    <div class="post-info">
+                        <div class="post-info-left">
+                            <div class="post-date">
+                                <span>@Model.PublishDate?.ToString("dd")</span> @Model.PublishDate?.ToString("MMM")
+                            </div>
+                            <a href="#" class="post-author">
+                                <i class="fa fa-user"></i> By Jillur
+                            </a>
+                        </div>
+                        <div class="post-info-right">
+                            <a href="#" class="post-like">
+                                <i class="fa fa-heart"></i> 100
+                            </a>
+                            <a href="#" class="post-comment">
+                                <i class="fa fa-comment"></i> 150
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="semi-title">@Model.Title</h3>
+                    @Html.Raw(Model.Body)
+                    <!--  Blog-Share Start  -->
+                    <div class="blog-share mtb-50">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-5 col-sm-6">
+                                <span class="pull-left">CATEGORY:</span>
+                                <span class="list-inline">
+                                    @Model.Category?.Name
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-7 col-sm-6">
+                                <div class="social-links text-right">
+                                    <ul class="social-link-list">
+                                        <li>Share:</li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-reddit"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Row -->
+                    </div>
+                    <!--  Blog-Share End  -->
+                    <!--  Blog-Pager Start  -->
+                    <div class="blog-pager">
+                        <ul class="pager">
+                            <li class="previous"><a href="#"><i class="zmdi zmdi-chevron-left"></i>prev post</a></li>
+                            <li class="next"><a href="#">Next post<i class="zmdi zmdi-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!--  Blog-Pager End  -->
+                </div>
+                <!-- Blog Details End -->
+                <!-- Blog Realated Post Start -->
+                @await Component.InvokeAsync("RelatedBlogPost",new {postId=Model.Id,size=5})
+
+                <!-- Blog Realated Post Start -->
+                <!-- Comment Area Start -->
+                <div class="comment-area recent-post">
+                    <h3 class="sidebar-title">1 COMMENTS</h3>
+                    <!-- Single Comment Start -->
+                    <div class="single-comment">
+                        <div class="comment-img f-left pr-30">
+                            <img src="img/blog/6.jpg" alt="blog-comment">
+                        </div>
+                        <div class="comment-details fix">
+                            <h4><a href="#">RICE JOHNNY</a></h4>
+                            <span>August 10, 2018 at 11:08 am</span>
+                            <p>But I must explain to you how all this mistaken idea of denouncing pleas praising pain born and I will give you a complete account of the system</p>
+                        </div>
+                        <a class="reply" href="#">reply</a>
+                    </div>
+                    <!-- Single Comment End -->
+                </div>
+                <!-- Comment Area End -->
+                <!-- Contact Email Area Start -->
+                <div class="blog-detail-contact">
+                    <h3 class="mb-5">Contact Us</h3>
+                    <p class="text-capitalize mb-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <form id="contact-form" class="contact-form" action="https://htmldemo.net/bigon/bigon/mail.php" method="post">
+                        <div class="address-wrapper row">
+                            <div class="col-md-12">
+                                <div class="address-fname">
+                                    <input type="text" name="name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="address-email">
+                                    <input type="email" name="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="address-web">
+                                    <input type="text" name="website" placeholder="Website">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="address-subject">
+                                    <input type="text" name="subject" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="address-textarea">
+                                    <textarea name="message" placeholder="Write your message"></textarea>
+                                </div>
+                            </div>
+                            <p class="form-message ml-15"></p>
+                            <div class="col-12 footer-content mail-content">
+                                <div class="send-email pull-right">
+                                    <input type="submit" value="Submit" class="submit">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Contact Email Area End -->
+            </div>
+            <!-- Main Blog End -->
+            <!-- Sidebar Main Blog Start -->
+            <div class="col-lg-4 col-12">
+                <div class="main-right-sidebar border-default universal-padding">
+                    <!-- Recent Post Start -->
+                    <div class="recent-post pt-30 same-sidebar">
+                        <h3 class="sidebar-title">recent posts</h3>
+                        @await Component.InvokeAsync("RecentBlogPosts",new { size = 4 })
+                    </div>
+                    <!-- Recent Post End -->
+                    <!-- Category Post Start -->
+                    <div class="categorie recent-post same-sidebar">
+                        <h3 class="sidebar-title mt-40">categories</h3>
+                        <ul class="categorie-list">
+                            <li><a href="#">Corporate</a></li>
+                            <li><a href="#">Creative</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Technology</a></li>
+                        </ul>
+                    </div>
+                    <!-- Category Post End -->
+                    <!-- Meta Post Start -->
+                    <div class="categorie recent-post same-sidebar">
+                        <h3 class="sidebar-title mt-40">Tags</h3>
+                        <ul class="tag-list">
+                            @foreach (var item in Model.TagCloud.Select(tc => tc.Tag))
+                            {
+                                <li>
+                                    <a asp-action="PostsByTag" asp-route-tagId="@item.Id">@item.Text</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <!-- Meta Post End -->
+                </div>
+            </div>
+            <!-- Sidebar Main Blog End -->
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Blog Area End -->

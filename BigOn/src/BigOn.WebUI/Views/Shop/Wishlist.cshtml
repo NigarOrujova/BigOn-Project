@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Wishlist";
+}
+
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="wishlist.html">Wishlist</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+<!-- Wish List Start -->
+<div class="cart-main-area wish-list pb-50">
+    <div class="container">
+        <!-- Section Title Start -->
+        <h2 class="text-capitalize sub-heading">wishlist</h2>
+        <!-- Section Title Start End -->
+        <div class="row">
+            <div class="col-md-12 col-12 col-12">
+                <!-- Form Start -->
+                <form action="#">
+                    <!-- Table Content Start -->
+                    <div class="table-content table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product-remove">Remove</th>
+                                    <th class="product-thumbnail">Image</th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-price">Unit Price</th>
+                                    <th class="product-quantity">Stock Status</th>
+                                    <th class="product-subtotal">add to cart</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="product-remove">
+                                            <a href="http://google.com" onclick="removeFromWishlist(event,@item.Id)">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                        <td class="product-thumbnail">
+                                            <a href="#">
+                                                <img src="~/uploads/images/@item.Images.FirstOrDefault()?.Path"
+                                                 alt="cart-image" />
+                                            </a>
+                                        </td>
+                                        <td class="product-name"><a href="#">@item.Name</a></td>
+                                        <td class="product-price"><span class="amount">@item.Price?.ToString("0.00₼")</span></td>
+                                        <td class="product-stock-status"><span>in stock</span></td>
+                                        <td class="product-add-to-cart">
+                                            <a data-product-id="@item.Id" basket>Sebete at</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Table Content Start -->
+                </form>
+                <!-- Form End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+</div>
+<!-- Wish List End -->
+
+<partial name="_Newsletter" />
+
+@section addcss{
+    <link rel="stylesheet" type="text/css" href="~/libs/toastr.js/toastr.min.css">
+}
+
+@section addjs{    
+    <script type="text/javascript" src="~/libs/toastr.js/toastr.min.js"></script>
+    <script type="text/javascript" src="~/admin/js/customize.toastr.js"></script>
+    <script src="~/libs/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+        function removeFromWishlist(ev, id) {
+            ev.preventDefault();
+            //[1,2,3,4]
+
+            let wishlist = $.cookie('wishlist');
+
+            if (wishlist != undefined) {
+                //logic
+                wishlist = JSON.parse(`${wishlist}`);
+
+                wishlist = wishlist.filter(item => item != id);
+
+                $.cookie('wishlist', JSON.stringify(wishlist).replace(/"/g, ""),
+                    {
+                        expires: 15,
+                        path: ''
+                    });
+            }
+
+
+            $(ev.currentTarget).closest('tr').remove();
+        }
+
+
+        $(document).ready(function() {
+            $('a[data-product-id][basket]').click(function(e) {
+                e.preventDefault();
+
+                let data = $(e.currentTarget).data();
+
+                $.ajax({
+                    url: '@Url.Action("AddToBasket")',
+                    type: 'POST',
+                    data: data,
+                    contentType: 'application/x-www-form-urlencoded',
+                    success: function(response) {
+
+                        if (response.error == true) {
+                             toastr.error(response.message, "Xəta!");
+                            return;
+                        }
+
+                        toastr.success(response.message, "Ugur!");
+                        removeFromWishlist(e,data.id);
+
+                    },
+                    error: function(response) {
+                        console.log(response);
+                    },
+                });
+
+            });
+        });
+    </script>
+}

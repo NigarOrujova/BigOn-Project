@@ -1,0 +1,78 @@
+﻿@model PagedViewModel<BlogPost>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Breadcrumb End -->
+<!-- Blog Area Start -->
+<div class="blog-area off-white-bg pb-50">
+    <div class="container">
+        <div class="row">
+            <!-- Section Title Start -->
+            <div class="col-12">
+                <div class="section-title text-center ptb-50">
+                    <h3 class="section-info">ALL LATEST BLOGS</h3>
+                </div>
+            </div>
+            <!-- Section Title End -->
+        </div>
+        <!-- Row End -->
+        <div class="row">
+            @foreach (var item in Model.Items)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <!-- Single Blog Start -->
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a asp-action="Details" asp-route-slug="@item.Slug">
+                                <img src="~/uploads/images/@item.ImagePath" alt="blog-image">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-content-upper">
+                                <h6 class="blog-title">
+                                    <a asp-action="Details" asp-route-slug="@item.Slug">
+                                        @item.Title
+                                    </a>
+                                </h6>
+                                <div style="height:143px;overflow:hidden;text-align:justify">
+                                    @item.Body.ToPlainText()
+                                </div>
+                            </div>
+                            <div class="blog-content-lower">
+                                <a href="https://themeforest.net/user/hastech">Hastech</a>
+                                <span class="f-right">@item.PublishDate?.ToString("dd MMM, yyyy")</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Blog End -->
+                </div>
+            }
+
+        </div>
+        <!-- Row End -->
+        <div class="row">
+            <div class="col-12">
+                @Model.GetPager(Url,"index",area:"")
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Blog Area End -->
+
+<partial name="_Newsletter" />

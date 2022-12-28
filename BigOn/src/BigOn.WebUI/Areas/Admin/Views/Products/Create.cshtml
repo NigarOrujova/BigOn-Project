@@ -1,0 +1,150 @@
+﻿@model ProductCreateCommand
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Page-header start -->
+<div class="page-header">
+    <div class="row align-items-end">
+        <div class="col-lg-8">
+            <div class="page-header-title">
+                <div class="d-inline">
+                    <h4>Bootstrap Basic Tables</h4>
+                    <span>
+                        lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="../index.html"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Bootstrap Table</a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a href="#!">Basic Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page-header end -->
+
+<div class="page-body">
+    <div class="card">
+        <div class="card-header">
+            <h5>Basic Table</h5>
+            <span>use class <code>table</code> inside table element</span>
+        </div>
+        <div class="card-block table-border-style">
+            <div class="card-block">
+                <h4 class="sub-title">Basic Inputs</h4>
+                <form method="post" enctype="multipart/form-data" id="frm">
+                    <div class="form-row">
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label class="control-label" asp-for="Name"></label>
+                                    <input class="form-control" asp-for="Name" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label class="control-label" asp-for="ShortDescription"></label>
+                                    <input class="form-control" asp-for="ShortDescription" />
+                                    <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label class="control-label" asp-for="BrandId"></label>
+                                    <select class="form-control select2" asp-for="BrandId" asp-items="@ViewBag.BrandId"></select>
+                                    <span asp-validation-for="BrandId" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label class="control-label" asp-for="CategoryId"></label>
+                                    <select class="form-control select2" asp-for="CategoryId" asp-items="@ViewBag.CategoryId"></select>
+                                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="imager-container mt-3 mt-md-0" id="viewer1" name="Images"></div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12">
+                            <textarea class="form-control editor" id="editor" asp-for="Description"></textarea>
+                        </div>
+                        <div class="col-12 d-flex justify-content-end mt-3">
+                            <button class="btn btn-success mr-2">Save</button>
+                            <a class="btn btn-info" asp-action="index">Go Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section addcss{
+    <link rel="stylesheet" href="~/libs/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="~/libs/imager/css/imager.css" />
+}
+
+    @section addjs{
+    <script src="~/libs/select2/js/select2.full.js"></script>
+    <script src="~/libs/imager/js/imager.js"></script>
+    <script src="~/libs/ckeditor5/ckeditor.min.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        $('#viewer1').imgadd({
+            tnWidth: '50px',
+            tnHeight: '50px',
+            fontSize: '55px',
+            plusInnerHtml: '',
+            plusBtnClass: undefined
+        });
+        $('.select2').select2();
+
+        $('#frm').submit(function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(e.currentTarget);
+
+            $.ajax({
+               type:'post',
+               data:formData,
+               processData:false,
+               contentType:false,
+               success:function(response){
+                  // console.log(response);
+
+                   if (response.error == true) {
+                       let errors = response.errors.map(item => { 
+                       
+                           return {
+                               propertyName: item.propertyName,
+                               errorMessage: item.errorMessage
+                           }
+
+                       });
+
+                       console.log(errors);
+                   }
+               }
+            });
+
+        });
+    </script>
+}

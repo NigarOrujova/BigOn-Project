@@ -1,0 +1,97 @@
+﻿@model RegisterCommand
+
+@{
+    ViewData["Title"] = "Qeydiyyat";
+}
+
+
+<div class="breadcrumb-area ptb-50">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="index.html">Ana səhifə</a>
+                </li>
+                <li class="active">
+                    <a href="404.html">Qeydiyyat</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="register-account pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="register-title">
+                    <h3 class="mb-10">Yeni hesab</h3>
+                    <p class="mb-10">
+                        Qeydiyyatdan keçməklə siz sistem funksionallıqlarını tam istifadə edə bilərsiniz
+                    </p>
+                </div>
+            </div>
+        </div>
+        <form class="form-horizontal" method="post" autocomplete="off">
+            <fieldset>
+                <legend>Şəxsi məlumatlar</legend>
+                <div class="form-group row">
+                    <label class="control-label col-sm-2" asp-for="Name">
+                        <span class="require">*</span>
+                        Adınız
+                    </label>
+                    <div class="col-sm-10">
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-sm-2" asp-for="Surname">
+                        <span class="require">*</span>
+                        Soyadınız
+                    </label>
+                    <div class="col-sm-10">
+                        <input asp-for="Surname" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-sm-2" asp-for="Email">
+                        <span class="require">*</span>
+                        E-poçt
+                    </label>
+                    <div class="col-sm-10">
+                        <input asp-for="Email" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Şifrəniz</legend>
+                <div class="form-group row">
+                    <label class="control-label col-sm-2" asp-for="Password">
+                        <span class="require">*</span>
+                        Şifrə:
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="password" asp-for="Password" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-sm-2" asp-for="ConfirmPassword">
+                        <span class="require">*</span>
+                        Şifrə təkrarı
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <div class="buttons newsletter-input">
+                <div>
+                    Bütün <a href="#" class="agree"><b>qaydalar</b></a>`la razıyam
+                    <input type="checkbox" name="agree" value="1"> &nbsp;
+                    <input type="submit" value="Davam et" class="newsletter-btn">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<partial name="_Newsletter" />
