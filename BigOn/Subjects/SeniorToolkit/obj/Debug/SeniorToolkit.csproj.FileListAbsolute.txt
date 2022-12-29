@@ -1,0 +1,8 @@
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\bin\Debug\ItemTemplates\CSharp\1033\SeniorToolkit.zip
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\obj\Debug\SeniorToolkit.csproj.AssemblyReference.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\obj\Debug\_EmptyResource.resources
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\obj\Debug\SeniorToolkit.csproj.GenerateResource.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\obj\Debug\SeniorToolkit.csproj.CoreCompileInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\obj\Debug\CSharp\1033\SeniorToolkit.zip
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\obj\Debug\SeniorToolkit.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\Subjects\SeniorToolkit\obj\Debug\SeniorToolkit.pdb

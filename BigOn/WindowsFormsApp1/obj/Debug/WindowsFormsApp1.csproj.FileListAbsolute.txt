@@ -1,0 +1,11 @@
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

@@ -1,0 +1,12 @@
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\bin\Debug\net5.0\BigOn.Application.deps.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\bin\Debug\net5.0\BigOn.Application.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\bin\Debug\net5.0\BigOn.Application.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\BigOn.Application.csproj.AssemblyReference.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\BigOn.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\BigOn.Application.AssemblyInfoInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\BigOn.Application.AssemblyInfo.cs
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\BigOn.Application.csproj.CoreCompileInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\BigOn.Application.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\refint\BigOn.Application.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\BigOn.Application.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Application\obj\Debug\net5.0\ref\BigOn.Application.dll

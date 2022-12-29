@@ -15,7 +15,7 @@ namespace RepositoryPatternIntro.Repositories.Concrate
         {
             entities.Add(entity);
 
-            return entity
+            return entity;
         }
 
         public Brand Edit(Brand entity)

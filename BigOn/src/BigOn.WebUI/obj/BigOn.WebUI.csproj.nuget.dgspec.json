@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.WebUI\\BigOn.WebUI.csproj": {}
+    "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.WebUI\\BigOn.WebUI.csproj": {}
   },
   "projects": {
-    "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.Domain\\BigOn.Domain.csproj": {
+    "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Application\\BigOn.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.Domain\\BigOn.Domain.csproj",
-        "projectName": "BigOn.Domain",
-        "projectPath": "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.Domain\\BigOn.Domain.csproj",
-        "packagesPath": "C:\\Users\\Senior\\.nuget\\packages\\",
-        "outputPath": "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.Domain\\obj\\",
+        "projectUniqueName": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Application\\BigOn.Application.csproj",
+        "projectName": "BigOn.Application",
+        "projectPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Application\\BigOn.Application.csproj",
+        "packagesPath": "C:\\Users\\Nigar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Senior\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Nigar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,6 +28,83 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Domain\\BigOn.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Domain\\BigOn.Domain.csproj",
+        "projectName": "BigOn.Domain",
+        "projectPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Domain\\BigOn.Domain.csproj",
+        "packagesPath": "C:\\Users\\Nigar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Nigar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Application\\BigOn.Application.csproj": {
+                "projectPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Application\\BigOn.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -115,7 +188,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -124,25 +198,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.WebUI\\BigOn.WebUI.csproj": {
+    "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.WebUI\\BigOn.WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.WebUI\\BigOn.WebUI.csproj",
+        "projectUniqueName": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.WebUI\\BigOn.WebUI.csproj",
         "projectName": "BigOn.WebUI",
-        "projectPath": "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.WebUI\\BigOn.WebUI.csproj",
-        "packagesPath": "C:\\Users\\Senior\\.nuget\\packages\\",
-        "outputPath": "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.WebUI\\obj\\",
+        "projectPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.WebUI\\BigOn.WebUI.csproj",
+        "packagesPath": "C:\\Users\\Nigar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.WebUI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Senior\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Nigar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,8 +226,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.Domain\\BigOn.Domain.csproj": {
-                "projectPath": "D:\\Solutions\\P412\\bigon-ecommerce-solution\\BigOn Solution\\src\\BigOn.Domain\\BigOn.Domain.csproj"
+              "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Domain\\BigOn.Domain.csproj": {
+                "projectPath": "C:\\Users\\Nigar\\Desktop\\BigOnLast\\BigOn\\BigOn\\src\\BigOn.Domain\\BigOn.Domain.csproj"
               }
             }
           }
@@ -223,7 +293,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -235,7 +306,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

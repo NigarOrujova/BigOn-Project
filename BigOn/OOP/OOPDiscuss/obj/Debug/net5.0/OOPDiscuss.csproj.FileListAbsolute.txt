@@ -1,0 +1,16 @@
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\bin\Debug\net5.0\OOPDiscuss.exe
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\bin\Debug\net5.0\OOPDiscuss.deps.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\bin\Debug\net5.0\OOPDiscuss.runtimeconfig.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\bin\Debug\net5.0\OOPDiscuss.runtimeconfig.dev.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\bin\Debug\net5.0\OOPDiscuss.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\bin\Debug\net5.0\OOPDiscuss.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.csproj.AssemblyReference.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.AssemblyInfoInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.AssemblyInfo.cs
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.csproj.CoreCompileInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\refint\OOPDiscuss.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\OOPDiscuss.genruntimeconfig.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\OOP\OOPDiscuss\obj\Debug\net5.0\ref\OOPDiscuss.dll

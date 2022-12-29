@@ -1,0 +1,16 @@
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\bin\Debug\net5.0\4_I_in_SOLID.exe
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\bin\Debug\net5.0\4_I_in_SOLID.deps.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\bin\Debug\net5.0\4_I_in_SOLID.runtimeconfig.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\bin\Debug\net5.0\4_I_in_SOLID.runtimeconfig.dev.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\bin\Debug\net5.0\4_I_in_SOLID.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\bin\Debug\net5.0\4_I_in_SOLID.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.csproj.AssemblyReference.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.AssemblyInfoInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.AssemblyInfo.cs
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.csproj.CoreCompileInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\refint\4_I_in_SOLID.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\4_I_in_SOLID.genruntimeconfig.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\SOLID\4_I_in_SOLID\obj\Debug\net5.0\ref\4_I_in_SOLID.dll

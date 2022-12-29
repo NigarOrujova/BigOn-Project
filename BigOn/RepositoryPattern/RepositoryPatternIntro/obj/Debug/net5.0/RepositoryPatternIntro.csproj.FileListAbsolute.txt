@@ -1,0 +1,16 @@
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.csproj.AssemblyReference.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.AssemblyInfoInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.AssemblyInfo.cs
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.csproj.CoreCompileInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\bin\Debug\net5.0\RepositoryPatternIntro.exe
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\bin\Debug\net5.0\RepositoryPatternIntro.deps.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\bin\Debug\net5.0\RepositoryPatternIntro.runtimeconfig.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\bin\Debug\net5.0\RepositoryPatternIntro.runtimeconfig.dev.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\bin\Debug\net5.0\RepositoryPatternIntro.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\bin\Debug\net5.0\RepositoryPatternIntro.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\refint\RepositoryPatternIntro.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\RepositoryPatternIntro.genruntimeconfig.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\RepositoryPattern\RepositoryPatternIntro\obj\Debug\net5.0\ref\RepositoryPatternIntro.dll

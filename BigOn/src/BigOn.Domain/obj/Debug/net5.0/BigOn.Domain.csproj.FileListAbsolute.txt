@@ -13,3 +13,21 @@ D:\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Debug\net5.0\re
 D:\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.pdb
 D:\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.genruntimeconfig.cache
 D:\P412\bigon-ecommerce-solution\BigOn Solution\BigOn.Domain\obj\Debug\net5.0\ref\BigOn.Domain.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.csproj.AssemblyReference.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.AssemblyInfoInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.AssemblyInfo.cs
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\bin\Debug\net5.0\BigOn.Domain.deps.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\bin\Debug\net5.0\BigOn.Domain.runtimeconfig.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\bin\Debug\net5.0\BigOn.Domain.runtimeconfig.dev.json
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\bin\Debug\net5.0\BigOn.Domain.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\bin\Debug\net5.0\BigOn.Domain.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\bin\Debug\net5.0\BigOn.Application.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\bin\Debug\net5.0\BigOn.Application.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.csproj.CopyComplete
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\refint\BigOn.Domain.dll
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.pdb
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\BigOn.Domain.genruntimeconfig.cache
+C:\Users\Nigar\Desktop\BigOnLast\BigOn\BigOn\src\BigOn.Domain\obj\Debug\net5.0\ref\BigOn.Domain.dll

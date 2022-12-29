@@ -1,6 +1,6 @@
-﻿@model IEnumerable<BlogPost>
+﻿@model PagedViewModel<BlogPost>
 
-@foreach (var item in Model)
+@foreach (var item in Model.Items)
 {
     <tr>
         <td class="image-cell">
